@@ -1,0 +1,2 @@
+include ':app', ':YKCore', ':YKSDKNet', ':YKSDKGoogle', ':YKSDKFacebook', ':YKSDKGooglePlay',':YKOneStore'
+rootProject.name='YKSDKCore'
