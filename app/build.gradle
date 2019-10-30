@@ -48,10 +48,18 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.android.support:multidex:1.0.3'
-    implementation project(path: ':YKSDKGooglePlay')
-    implementation project(path: ':YKOneStore')
-    implementation project(path: ':YKCore')
-    implementation project(path: ':YKSDKNet')
-    implementation project(path: ':YKSDKFacebook')
-    implementation project(path: ':YKSDKGoogle')
+    implementation 'com.github.muyishuangfeng:YKGooglePlay:1.0.2'
+    implementation 'com.github.muyishuangfeng:YKFacebook:1.0.0'
+    implementation 'com.github.muyishuangfeng:YKGoogle:1.0.0'
+    implementation 'com.github.muyishuangfeng:YKOneStore:1.0.0'
+    implementation 'com.github.muyishuangfeng:YKCore:1.0.0'
+    implementation 'com.github.muyishuangfeng:YKNet:1.0.1'
+
+
+//    implementation project(path: ':YKSDKGooglePlay')
+//    implementation project(path: ':YKOneStore')
+//    implementation project(path: ':YKCore')
+//    implementation project(path: ':YKSDKNet')
+//    implementation project(path: ':YKSDKFacebook')
+//    implementation project(path: ':YKSDKGoogle')
 }

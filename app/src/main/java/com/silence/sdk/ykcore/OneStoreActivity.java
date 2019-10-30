@@ -17,6 +17,7 @@ import com.silence.sdk.ykcore.manager.RechargeManager;
 import com.silence.sdk.ykcore.model.RechargeObject;
 import com.silence.sdk.ykcore.model.RechargeResult;
 import com.silence.sdk.ykcore.model.YKGameValues;
+import com.silence.sdk.ykonestore.OneStorePlatform;
 
 import java.util.Map;
 import java.util.WeakHashMap;
@@ -27,7 +28,7 @@ public class OneStoreActivity extends AppCompatActivity {
 
     Button mBtnPay;
     TextView mTxtResult;
-    String PUBLIC_KEY = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCu9RPDbvVqM8XWqVc75JXccIXN1VS8XViRZzATUq62kkFIXCeo52LKzBCh3iWFQIvX3jqDhim4ESqHMezEx8CxaTq8NpNoQXutBNmOEl+/7HTUsZxI93wgn9+7pFMyoFlasqmVjCcM7zbbAx5G0bySsm98TFxTu16OGmO01JGonQIDAQAB";
+    String PUBLIC_KEY = "123456";
     private static final int selfRequestCode = 0x01;
     String productID = "com.ltgamesyyjw.lslb1";
     private static final String TAG = OneStoreActivity.class.getSimpleName();
@@ -49,10 +50,10 @@ public class OneStoreActivity extends AppCompatActivity {
             public void onClick(View v) {
                 RechargeObject result = new RechargeObject();
                 result.setSku(productID);
-                result.setOrderID("123456");
-                result.setUserToken("1111111");
+                result.setOrderID("1111111");
+                result.setUserToken("78945522222");
                 result.setGoodsID("11");
-                result.setmGoodsType("inapp");
+                result.setmGoodsType("in-app");
                 result.setPublicKey(PUBLIC_KEY);
                 result.setPayTest(1);
                 RechargeManager.recharge(OneStoreActivity.this, Target.RECHARGE_ONE_STORE,
@@ -65,7 +66,7 @@ public class OneStoreActivity extends AppCompatActivity {
         YKGameOptions options = new YKGameOptions.Builder(this)
                 .debug(true)
                 .publicKey(PUBLIC_KEY)
-                .goodsType("inapp")
+                .goodsType("in-app")
                 .payTest(1)
                 .oneStore()
                 .goodsID(productID, "11")
